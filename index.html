@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flip CSS</title>
+
+	<style>
+		.maincontainer {
+			position: relative;
+			width: 250px;
+			height: 320px;
+
+		}
+		
+		.thecard {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			transition: all .5s ease;
+
+		}
+
+		.thecard:active {
+			transform: rotateY(180deg)
+		}
+
+
+		.thefront {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+			background: yellow;
+			color: #333;
+			
+		}
+
+		.theback {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+			color: #333;
+			transform: rotateY(180deg);
+			background: red;
+			
+		}
+	</style>
+
+</head>
+<body>
+
+
+	<div class="maincontainer">
+		
+		<div class="thecard">
+
+			<div class="thefront">Frete do cartão</div>
+
+			<div class="theback"> Atrás do cartão</div>
+
+		</div>
+
+	</div>
+	
+</body>
+</html>
